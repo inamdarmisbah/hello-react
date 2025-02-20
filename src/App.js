@@ -3,14 +3,21 @@ import './App.css';
 import {useState} from "react"
 
 function App() {
-const[count,setCount]=useState(1);
-function countNum(){
-  setCount(count+1)
+const[num,setNum]=useState("");
+function evenOdd(){
+  if(num%2==0){
+    setNum(num+" is Even")
+
+  }
+  else{
+  setNum( num+" is Odd");
+  }
 }
 return(
   <div>
-  <h1>{count}</h1>
-  <button onClick={countNum}>Add num</button>
+    <h1>{num}</h1>
+    <input type="number"  onChange={(e)=>{setNum(e.target.value)}}/>
+    <button onClick={evenOdd}>evenOdd</button>
   </div>
 );
 }
