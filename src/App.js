@@ -1,27 +1,34 @@
 import logo from './logo.svg';
 import './App.css';
-import {useState} from "react"
+import { useState } from "react";
 
 function App() {
-const[num,setNum]=useState("");
-function evenOdd(){
-  if(num%2==0){
-    setNum(num+" is Even")
+  const [num, setNum] = useState("");
+  function ChangeNum(event) {
+    setNum(event.target.value)
 
   }
-  else{
-  setNum( num+" is Odd");
+  function EvenOdd() {
+    if (num % 2 == 0) {
+      setNum(num + "is Even");
+    }
+    else {
+      setNum(num + "is Odd");
+    }
   }
-}
-return(
-  <div>
-    <h1>{num}</h1>
-    <input type="number"  onChange={(e)=>{setNum(e.target.value)}}/>
-    <button onClick={evenOdd}>evenOdd</button>
-  </div>
-);
+  return (
+    <div>
+      <h1>{num}</h1>
+      <input type="text" onChange={ChangeNum} />
+      <button onClick={EvenOdd}>Check</button>
+    
+    </div>
+  );
+
+
 }
 
 
 
 export default App;
+
