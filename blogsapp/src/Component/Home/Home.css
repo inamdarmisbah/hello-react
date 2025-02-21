@@ -1,0 +1,17 @@
+.heading{
+    background-color: navy;
+    color:white;
+    display: flex;
+    justify-content: space-between;
+
+}
+.name{
+    font-size: 20px;
+    font-weight: bold;
+
+}
+.links{
+    display: flex;
+    justify-content: space-around;
+    
+}
